@@ -1,12 +1,12 @@
 :host {
   display: grid;
   gap: var(--md-sys-size-4);
-  padding: 0 var(--md-sys-size-2);
+  padding: 0 var(--md-sys-size-4);
 }
 
 header {
   height: var(--md-sys-size-8);
-  padding: var(--md-sys-size-4) var(--md-sys-size-2);
+  padding: var(--md-sys-size-4) 0;
 }
 
 button {
