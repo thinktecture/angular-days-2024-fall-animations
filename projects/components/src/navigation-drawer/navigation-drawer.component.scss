@@ -5,6 +5,7 @@
   border-top-right-radius: var(--md-sys-size-4);
   border-bottom-right-radius: var(--md-sys-size-4);
   padding: var(--md-sys-size-8) var(--md-sys-size-3);
+  animation: slideInFromLeft var(--md-sys-motion-duration-medium-4) both var(--md-sys-motion-easing-decelerating);
 }
 
 .logo {
