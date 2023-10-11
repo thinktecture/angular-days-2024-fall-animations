@@ -10,4 +10,9 @@
   display: grid;
   gap: var(--md-sys-size-4);
   width: 50%;
+
+  .message {
+    animation: fallIn var(--md-sys-motion-duration-medium-3) both var(--md-sys-motion-easing-emphasized);
+    animation-delay: calc(var(--message-index) * var(--md-sys-motion-duration-stagger-delay));
+  }
 }

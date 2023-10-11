@@ -11,6 +11,9 @@
   grid-template-columns: repeat(3, 1fr);
   height: 50%;
   gap: var(--md-sys-size-8);
+  animation-name: fadeInFromBottom;
+  animation-duration: var(--md-sys-motion-duration-medium-4);
+  animation-fill-mode: both;
 }
 
 .drawer {

@@ -1,7 +1,9 @@
 <div class="messages">
   <sl-list-item
-    *ngFor="let message of messages$ | async"
+    *ngFor="let message of messages$ | async; index as i"
+    [style.--message-index]="i+1"
     [model]="message"
     (close)="deleteMessage($event)"
+    class="message"
   ></sl-list-item>
 </div>
