@@ -1,9 +1,11 @@
+import { transition } from '@angular/animations';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {
   BottomBarComponent,
   MediumAndLargeScreenSizeDirective,
   NavigationDrawerComponent,
+  RouterAnimations,
   XSmallAndSmallScreenSizeDirective,
 } from '@sl/components';
 
@@ -19,5 +21,13 @@ import {
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  animations: [
+    RouterAnimations
+  ]
 })
-export class AppComponent {}
+export class AppComponent {
+
+  public prepareRoute(outlet: RouterOutlet) {
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+  }
+}

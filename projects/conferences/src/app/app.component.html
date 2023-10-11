@@ -1,5 +1,5 @@
 <sl-navigation-drawer *slScreenMediumAndLarge></sl-navigation-drawer>
-<main>
-  <router-outlet></router-outlet>
+<main [@routerAnimation]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
 </main>
 <sl-bottom-bar *slScreenXSmallAndSmall></sl-bottom-bar>

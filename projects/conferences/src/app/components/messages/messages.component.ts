@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ListItemComponent } from '@sl/components';
+import { ListItemComponent, ListContainer, ListItem } from '@sl/components';
 import { DataService } from '../../data.service';
 
 @Component({
@@ -10,6 +10,7 @@ import { DataService } from '../../data.service';
   templateUrl: './messages.component.html',
   styleUrls: ['./messages.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  animations: [ListContainer,ListItem]
 })
 export class MessagesComponent {
   private readonly dataService = inject(DataService);

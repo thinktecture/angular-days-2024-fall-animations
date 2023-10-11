@@ -3,8 +3,8 @@ import { ConferenceDetailComponent } from './conference-detail/conference-detail
 import { ConferencesComponent } from './conferences.component';
 
 const conferenceRoutes: Routes = [
-  { path: '', component: ConferencesComponent },
-  { path: ':id', component: ConferenceDetailComponent },
+  { path: '', component: ConferencesComponent, data: { animation: 'conferences' } },
+  { path: ':id', component: ConferenceDetailComponent, data: { animation: 'detail' } },
 ];
 
 export default conferenceRoutes;

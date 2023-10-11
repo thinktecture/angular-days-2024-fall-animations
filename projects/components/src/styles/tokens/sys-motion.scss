@@ -1,0 +1,28 @@
+:root {
+  /* Durations */
+  --md-sys-motion-duration-stagger-delay: 80ms;
+
+  --md-sys-motion-duration-short-1: 150ms;
+  --md-sys-motion-duration-short-2: 175ms;
+  --md-sys-motion-duration-short-3: 200ms;
+
+  --md-sys-motion-duration-medium-1: 250ms;
+  --md-sys-motion-duration-medium-2: 300ms;
+  --md-sys-motion-duration-medium-3: 350ms;
+  --md-sys-motion-duration-medium-4: 400ms;
+
+  --md-sys-motion-duration-long-1: 450ms;
+  --md-sys-motion-duration-long-2: 500ms;
+  --md-sys-motion-duration-long-3: 550ms;
+  --md-sys-motion-duration-long-4: 600ms;
+
+  --md-sys-motion-duration-extra-long-1: 700ms;
+  --md-sys-motion-duration-extra-long-2: 800ms;
+  --md-sys-motion-duration-extra-long-3: 900ms;
+  --md-sys-motion-duration-extra-long-4: 1000ms;
+
+  /* Easings */
+  --md-sys-motion-easing-emphasized: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --md-sys-motion-easing-accelerating: cubic-bezier(0.3, 0, 0.8, 0.15);
+  --md-sys-motion-easing-decelerating: cubic-bezier(0.05, 0.7, 0.1, 1);
+}
