@@ -9,10 +9,21 @@ h2 {
   margin: unset;
 }
 
-app-search-bar {
+sl-search-bar {
   padding: var(--md-sys-size-4);
   max-width: 100%;
   overflow: hidden;
+  &.list {
+    view-transition-name: list-search-bar;
+  }
+}
+
+sl-card.active {
+  view-transition-name: card-image;
+}
+
+sl-list-item.active {
+  view-transition-name: list-item;
 }
 
 .conferences-container {
@@ -25,6 +36,14 @@ app-search-bar {
   max-width: 100%;
   padding: var(--md-sys-size-4);
 
+  &.card {
+    view-transition-name: card-container;
+  }
+
+  &.list {
+    view-transition-name: list-card-container;
+  }
+
   &::-webkit-scrollbar {
     display: none;
   }
@@ -35,4 +54,8 @@ app-search-bar {
   gap: var(--md-sys-size-4);
   padding: var(--md-sys-size-4);
   max-width: 100%;
+
+  &.card {
+    view-transition-name: card-list-container;
+  }
 }

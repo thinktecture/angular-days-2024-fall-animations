@@ -1,7 +1,7 @@
 @if (message$ | async; as model) {
 <ng-container>
   <header>
-    <button class="back" matRipple [routerLink]="['/']">
+    <button class="back" matRipple viewTransition="list" [routerLink]="['/']" [triggerId]="model.id">
       <mat-icon fontIcon="arrow_back"></mat-icon>
     </button>
     <div class="heading">

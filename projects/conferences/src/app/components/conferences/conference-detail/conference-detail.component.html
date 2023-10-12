@@ -1,7 +1,13 @@
 @if (conference$ | async; as model) {
 <ng-container>
   <header>
-    <button class="back" matRipple [routerLink]="['/']">
+    <button
+      class="back"
+      matRipple
+      viewTransition="card"
+      [triggerId]="model.id"
+      [routerLink]="['/']"
+    >
       <mat-icon fontIcon="arrow_back"></mat-icon>
     </button>
   </header>

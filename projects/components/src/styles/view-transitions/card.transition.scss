@@ -1,0 +1,50 @@
+/**
+View Transition Name Convention:
+<type>-<object>
+ */
+
+::view-transition-old(card-container):only-child,
+::view-transition-new(card-container):only-child {
+  animation: var(--md-sys-motion-view-transition-duration) var(--md-sys-motion-easing-emphasized)
+    50ms both scale-away;
+}
+::view-transition-new(card-container):only-child {
+  animation-direction: reverse;
+  animation-timing-function: ease-in;
+}
+
+::view-transition-old(card-image),
+::view-transition-new(card-image) {
+  animation: none;
+  height: 100%;
+}
+
+::view-transition-old(card-image) {
+  display: none;
+}
+
+::view-transition-new(card-image) {
+  object-fit: cover;
+}
+
+::view-transition-new(card-detail-back) {
+  animation: var(--md-sys-motion-duration-short-3) var(--md-sys-motion-easing-emphasized)
+    var(--md-sys-motion-view-transition-duration) both enter-top;
+}
+
+::view-transition-old(card-detail-back) {
+  animation: var(--md-sys-motion-duration-short-3) ease-in both enter-top reverse;
+}
+
+::view-transition-old(card-list-container):only-child {
+  animation: var(--md-sys-motion-view-transition-duration) var(--md-sys-motion-easing-emphasized)
+      both scale-away,
+    var(--md-sys-motion-view-transition-duration) var(--md-sys-motion-easing-emphasized) both
+      leave-bottom;
+}
+::view-transition-new(card-list-container):only-child {
+  animation: var(--md-sys-motion-view-transition-duration) ease-in both scale-away reverse,
+    var(--md-sys-motion-view-transition-duration) ease-in both leave-bottom reverse;
+  height: 100%;
+}
+

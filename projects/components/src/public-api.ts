@@ -10,6 +10,8 @@ export * from './conference-info-drawer/conference-info-drawer.component';
 
 export * from './utility/screen-size.directive';
 export * from './utility/screen-size.service';
+export * from './utility/view-transition/view-transition.directive';
+export * from './utility/view-transition/view-transition.store';
 
 export * from './model/message.model';
 export * from './model/conference.model';

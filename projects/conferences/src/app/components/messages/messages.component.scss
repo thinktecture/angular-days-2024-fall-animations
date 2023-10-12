@@ -2,6 +2,7 @@
   position: relative;
   height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -10,4 +11,11 @@
   display: grid;
   gap: var(--md-sys-size-4);
   width: 50%;
+  view-transition-name: var(--message-id);
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }

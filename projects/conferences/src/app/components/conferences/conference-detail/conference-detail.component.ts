@@ -2,7 +2,7 @@ import { Component, inject, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Conference } from '@sl/components';
+import { Conference, ViewTransitionDirective } from '@sl/components';
 import { DataService } from '../../../data.service';
 import { MatIconModule } from '@angular/material/icon';
 import { MatRippleModule } from '@angular/material/core';
@@ -10,7 +10,7 @@ import { MatRippleModule } from '@angular/material/core';
 @Component({
   selector: 'app-conferences',
   standalone: true,
-  imports: [CommonModule, RouterLink, MatIconModule, MatRippleModule],
+  imports: [CommonModule, RouterLink, MatIconModule, MatRippleModule, ViewTransitionDirective],
   templateUrl: './conference-detail.component.html',
   styleUrls: ['./conference-detail.component.scss'],
 })

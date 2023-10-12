@@ -1,0 +1,79 @@
+::view-transition-old(list-container):only-child {
+  display: none;
+}
+::view-transition-new(list-back-button) {
+  animation: var(--md-sys-motion-duration-medium-1) var(--md-sys-motion-easing-emphasized) 900ms
+    both scale-in;
+}
+
+::view-transition-old(list-back-button) {
+  animation: var(--md-sys-motion-duration-short-1) var(--md-sys-motion-easing-emphasized) both
+    scale-in reverse;
+}
+
+::view-transition-new(list-details-header) {
+  animation: var(--md-sys-motion-duration-medium-2) var(--md-sys-motion-easing-emphasized)
+    var(--md-sys-motion-view-transition-duration) both fade-in;
+}
+
+::view-transition-old(list-details-header) {
+  animation: var(--md-sys-motion-duration-medium-1) var(--md-sys-motion-easing-emphasized) both
+    fade-in reverse;
+}
+
+::view-transition-old(list-search-bar):only-child {
+  animation:
+    var(--md-sys-motion-duration-medium-2) var(--md-sys-motion-easing-emphasized) both fade-out,
+    var(--md-sys-motion-duration-long-4) var(--md-sys-motion-easing-emphasized) both leave-top;
+}
+
+::view-transition-new(list-search-bar):only-child {
+  animation:
+    var(--md-sys-motion-duration-medium-4) ease-in both fade-out reverse,
+    var(--md-sys-motion-view-transition-duration) ease-in both leave-top reverse;
+}
+
+::view-transition-old(list-card-container):only-child {
+  animation:
+    var(--md-sys-motion-duration-medium-2) var(--md-sys-motion-easing-emphasized) both fade-out,
+    var(--md-sys-motion-duration-long-4) var(--md-sys-motion-easing-emphasized) both scale-in
+      reverse;
+}
+
+::view-transition-new(list-card-container):only-child {
+  animation:
+    var(--md-sys-motion-duration-long-2) ease-in both fade-out reverse,
+    var(--md-sys-motion-duration-long-2) ease-in both partial-scale-in;
+}
+
+/* ::view-transition-group(*) {
+  animation-duration: 1.3s;
+  animation-timing-function: linear(
+    0,
+    0.009,
+    0.035 2.1%,
+    0.141,
+    0.281 6.7%,
+    0.723 12.9%,
+    0.938 16.7%,
+    1.017,
+    1.077,
+    1.121,
+    1.149 24.3%,
+    1.159,
+    1.163,
+    1.161,
+    1.154 29.9%,
+    1.129 32.8%,
+    1.051 39.6%,
+    1.017 43.1%,
+    0.991,
+    0.977 51%,
+    0.974 53.8%,
+    0.975 57.1%,
+    0.997 69.8%,
+    1.003 76.9%,
+    1.004 83.8%,
+    1
+  );
+} */

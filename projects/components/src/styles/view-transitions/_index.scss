@@ -1,0 +1,6 @@
+@forward 'card.transition';
+@forward 'list.transition';
+
+::view-transition-group(*) {
+  animation-duration: var(--md-sys-motion-view-transition-duration);
+}

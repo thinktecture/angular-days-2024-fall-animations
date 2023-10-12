@@ -1,18 +1,25 @@
-<sl-search-bar></sl-search-bar>
-<div class="conferences-container">
+<sl-search-bar viewTransition></sl-search-bar>
+<div viewTransition class="conferences-container">
   @for (conference of conferences$ | async; track conference.id) {
   <sl-card
+    viewTransition="card"
+    [triggerId]="conference.id"
     [routerLink]="['..', 'conferences', conference.id]"
-    [model]="conference" ></sl-card >
+    [model]="conference"
+    [class.active]="(recentTrigger$ | async) === conference.id"
+  ></sl-card>
   }
 </div>
-<div class="messages-container">
+<div viewTransition class="messages-container">
   <h2>Messagees from ...</h2>
   @for (message of messages$ | async; track message.id) {
   <sl-list-item
+    viewTransition="list"
+    [triggerId]="message.id"
     [routerLink]="['..', 'messages', message.id]"
     [model]="message"
     (close)="deleteMessage($event)"
-  ></sl-list-item >
+    [class.active]="(recentTrigger$ | async) === message.id"
+  ></sl-list-item>
   }
 </div>

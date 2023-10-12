@@ -1,5 +1,14 @@
+<div class="buttons">
+  <button (click)="filterMessages('all')">All</button>
+  <button (click)="filterMessages('even')">Even</button>
+  <button (click)="filterMessages('odd')">Odd</button>
+</div>
 <div class="messages">
-  @for (message of messages$ | async; track message.id) {
-  <sl-list-item [model]="message" (close)="deleteMessage($event)"></sl-list-item>
+  @for (message of messages$ | async; track message.id; let i = $index) {
+  <sl-list-item
+    [model]="message"
+    (close)="deleteMessage($event)"
+    [style.view-transition-name]="'box-' + i"
+  ></sl-list-item>
   }
 </div>
