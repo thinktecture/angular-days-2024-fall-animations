@@ -1,13 +1,12 @@
 <div class="cards">
-  <sl-card
-    *ngFor="let conference of conferences$ | async"
-    [model]="conference"
-    (click)="selectedConference$.next(conference)"
-  ></sl-card>
+  @for (conference of conferences$ | async; track conference.id) {
+  <sl-card [model]="conference" (click)="selectedConference$.next(conference)"></sl-card>
+  }
 </div>
+@if (selectedConference$ | async; as selectedConf) {
 <sl-conference-info-drawer
-  *ngIf="selectedConference$ | async as selectedConf"
   [conference]="selectedConf"
   (closed)="selectedConference$.next(undefined)"
   class="drawer"
 ></sl-conference-info-drawer>
+}

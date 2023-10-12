@@ -25,36 +25,34 @@ import type { User } from './User';
         <h1>Acme</h1>
       </div>
       <div>
-        <div *ngIf="user">
+        @if (user) {<div>
           <span class="welcome">
             Welcome, <b>{{ user.name }}</b
             >!
           </span>
-          <storybook-button
-            *ngIf="user"
+          @if (user) {<storybook-button
+           
             size="small"
             (onClick)="onLogout.emit($event)"
             label="Log out"
-          ></storybook-button>
-        </div>
-        <div *ngIf="!user">
-          <storybook-button
-            *ngIf="!user"
-            size="small"
+          ></storybook-button>}
+        </div>}
+        @if (!user) {<div>
+          <@if (!user) {storybook-button
+                        size="small"
             class="margin-left"
             (onClick)="onLogin.emit($event)"
             label="Log in"
           ></storybook-button>
-          <storybook-button
-            *ngIf="!user"
-            primary
+}          <@if (!user) {storybook-button
+                        primary
             size="small"
             primary="true"
             class="margin-left"
             (onClick)="onCreateAccount.emit($event)"
             label="Sign up"
           ></storybook-button>
-        </div>
+}        </div>}
       </div>
     </div>
   </header>`,

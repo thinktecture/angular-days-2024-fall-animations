@@ -1,4 +1,5 @@
-<ng-container *ngIf="message$ | async as model">
+@if (message$ | async; as model) {
+<ng-container>
   <header>
     <button class="back" matRipple [routerLink]="['/']">
       <mat-icon fontIcon="arrow_back"></mat-icon>
@@ -46,3 +47,4 @@
     </div>
   </main>
 </ng-container>
+}

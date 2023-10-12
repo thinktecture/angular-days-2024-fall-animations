@@ -1,4 +1,5 @@
-<ng-container *ngIf="conference$ | async as model">
+@if (conference$ | async; as model) {
+<ng-container>
   <header>
     <button class="back" matRipple [routerLink]="['/']">
       <mat-icon fontIcon="arrow_back"></mat-icon>
@@ -7,3 +8,4 @@
 
   <img [src]="model.imageUrl" alt="ConferenceModel Image" />
 </ng-container>
+}

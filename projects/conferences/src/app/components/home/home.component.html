@@ -1,17 +1,18 @@
 <sl-search-bar></sl-search-bar>
 <div class="conferences-container">
+  @for (conference of conferences$ | async; track conference.id) {
   <sl-card
-    *ngFor="let conference of conferences$ | async"
     [routerLink]="['..', 'conferences', conference.id]"
-    [model]="conference"
-  ></sl-card>
+    [model]="conference" ></sl-card >
+  }
 </div>
 <div class="messages-container">
   <h2>Messagees from ...</h2>
+  @for (message of messages$ | async; track message.id) {
   <sl-list-item
-    *ngFor="let message of messages$ | async"
     [routerLink]="['..', 'messages', message.id]"
     [model]="message"
     (close)="deleteMessage($event)"
-  ></sl-list-item>
+  ></sl-list-item >
+  }
 </div>
