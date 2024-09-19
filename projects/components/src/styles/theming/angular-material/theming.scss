@@ -11,7 +11,7 @@
 @include mat.core();
 
 $primary-palette: map.merge(
-    mat.$indigo-palette,
+    mat.$m2-indigo-palette,
     (
       500: var(--md-sys-color-primary),
       contrast: (
@@ -24,7 +24,7 @@ $primary-palette: map.merge(
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$design-system-impl-material-primary: mat.define-palette($primary-palette);
+$design-system-impl-material-primary: mat.m2-define-palette($primary-palette);
 
 $components: (
   color: (
@@ -43,7 +43,7 @@ $components: (
 @media (prefers-color-scheme: light) {
   // Create the theme object. A theme consists of configurations for individual
   // theming systems such as "color" or "typography".
-  $base-theme: mat.define-light-theme((
+  $base-theme: mat.m2-define-light-theme((
     color: (
       primary: $design-system-impl-material-primary,
       accent: $design-system-impl-material-primary,
@@ -58,7 +58,7 @@ $components: (
 }
 
 @media (prefers-color-scheme: dark) {
-  $base-theme: mat.define-dark-theme((
+  $base-theme: mat.m2-define-dark-theme((
     color: (
       primary: $design-system-impl-material-primary,
       accent: $design-system-impl-material-primary,
